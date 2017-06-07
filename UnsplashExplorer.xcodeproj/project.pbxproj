@@ -13,6 +13,10 @@
 		A6AEDEB01EE7F17C00DBE3FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6AEDEAF1EE7F17C00DBE3FF /* Assets.xcassets */; };
 		A6AEDEB31EE7F17C00DBE3FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6AEDEB11EE7F17C00DBE3FF /* LaunchScreen.storyboard */; };
 		A6AEDEBE1EE7F17C00DBE3FF /* UnsplashExplorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AEDEBD1EE7F17C00DBE3FF /* UnsplashExplorerTests.swift */; };
+		A6AEDECA1EE80A5100DBE3FF /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A6AEDEC91EE80A5100DBE3FF /* Inceptionv3.mlmodel */; };
+		A6DD01EC1EE88E3B00D51951 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DD01DC1EE88E3B00D51951 /* UIImageExtensions.swift */; };
+		A6DD01ED1EE88E3B00D51951 /* PredictionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DD01DE1EE88E3B00D51951 /* PredictionResult.swift */; };
+		A6DD01EE1EE88E3B00D51951 /* PredictionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DD01E01EE88E3B00D51951 /* PredictionService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		A6AEDEB91EE7F17C00DBE3FF /* UnsplashExplorerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnsplashExplorerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6AEDEBD1EE7F17C00DBE3FF /* UnsplashExplorerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashExplorerTests.swift; sourceTree = "<group>"; };
 		A6AEDEBF1EE7F17C00DBE3FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6AEDEC91EE80A5100DBE3FF /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Inceptionv3.mlmodel; path = ../../../../../Downloads/Inceptionv3.mlmodel; sourceTree = "<group>"; };
+		A6DD01DC1EE88E3B00D51951 /* UIImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
+		A6DD01DE1EE88E3B00D51951 /* PredictionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictionResult.swift; sourceTree = "<group>"; };
+		A6DD01E01EE88E3B00D51951 /* PredictionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictionService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +85,9 @@
 		A6AEDEA71EE7F17C00DBE3FF /* UnsplashExplorer */ = {
 			isa = PBXGroup;
 			children = (
-				A6AEDEA81EE7F17C00DBE3FF /* AppDelegate.swift */,
-				A6AEDEAA1EE7F17C00DBE3FF /* ViewController.swift */,
-				A6AEDEAC1EE7F17C00DBE3FF /* Main.storyboard */,
-				A6AEDEAF1EE7F17C00DBE3FF /* Assets.xcassets */,
-				A6AEDEB11EE7F17C00DBE3FF /* LaunchScreen.storyboard */,
-				A6AEDEB41EE7F17C00DBE3FF /* Info.plist */,
+				A6DD01D51EE88E3B00D51951 /* Common */,
+				A6DD01F31EE88F2900D51951 /* Modules */,
+				A6AEDEC81EE8059E00DBE3FF /* Resources */,
 			);
 			path = UnsplashExplorer;
 			sourceTree = "<group>";
@@ -94,6 +99,70 @@
 				A6AEDEBF1EE7F17C00DBE3FF /* Info.plist */,
 			);
 			path = UnsplashExplorerTests;
+			sourceTree = "<group>";
+		};
+		A6AEDEC81EE8059E00DBE3FF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A6AEDEB11EE7F17C00DBE3FF /* LaunchScreen.storyboard */,
+				A6AEDEC91EE80A5100DBE3FF /* Inceptionv3.mlmodel */,
+				A6AEDEAF1EE7F17C00DBE3FF /* Assets.xcassets */,
+				A6AEDEB41EE7F17C00DBE3FF /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A6DD01D51EE88E3B00D51951 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A6AEDEA81EE7F17C00DBE3FF /* AppDelegate.swift */,
+				A6DD01D91EE88E3B00D51951 /* Extensions */,
+				A6DD01DD1EE88E3B00D51951 /* Models */,
+				A6DD01DF1EE88E3B00D51951 /* Services */,
+			);
+			name = Common;
+			path = "../../../../Downloads/CoreMLDemo-master/CoreMLDemo/Common";
+			sourceTree = "<group>";
+		};
+		A6DD01D91EE88E3B00D51951 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A6DD01DC1EE88E3B00D51951 /* UIImageExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A6DD01DD1EE88E3B00D51951 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A6DD01DE1EE88E3B00D51951 /* PredictionResult.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A6DD01DF1EE88E3B00D51951 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A6DD01E01EE88E3B00D51951 /* PredictionService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A6DD01F31EE88F2900D51951 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				A6DD01F41EE88F3C00D51951 /* Main */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		A6DD01F41EE88F3C00D51951 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A6AEDEAA1EE7F17C00DBE3FF /* ViewController.swift */,
+				A6AEDEAC1EE7F17C00DBE3FF /* Main.storyboard */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +266,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6DD01ED1EE88E3B00D51951 /* PredictionResult.swift in Sources */,
+				A6DD01EC1EE88E3B00D51951 /* UIImageExtensions.swift in Sources */,
 				A6AEDEAB1EE7F17C00DBE3FF /* ViewController.swift in Sources */,
+				A6AEDECA1EE80A5100DBE3FF /* Inceptionv3.mlmodel in Sources */,
 				A6AEDEA91EE7F17C00DBE3FF /* AppDelegate.swift in Sources */,
+				A6DD01EE1EE88E3B00D51951 /* PredictionService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +300,7 @@
 				A6AEDEAD1EE7F17C00DBE3FF /* Base */,
 			);
 			name = Main.storyboard;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		A6AEDEB11EE7F17C00DBE3FF /* LaunchScreen.storyboard */ = {
@@ -348,9 +422,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4GA7VHNLUN;
-				INFOPLIST_FILE = UnsplashExplorer/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/UnsplashExplorer/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ist.swift.unsplashexplorer.UnsplashExplorer;
+				PRODUCT_BUNDLE_IDENTIFIER = ist.swift.unsplashexplorer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -362,9 +436,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4GA7VHNLUN;
-				INFOPLIST_FILE = UnsplashExplorer/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/UnsplashExplorer/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ist.swift.unsplashexplorer.UnsplashExplorer;
+				PRODUCT_BUNDLE_IDENTIFIER = ist.swift.unsplashexplorer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -422,6 +496,7 @@
 				A6AEDEC41EE7F17C00DBE3FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A6AEDEC51EE7F17C00DBE3FF /* Build configuration list for PBXNativeTarget "UnsplashExplorerTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +505,7 @@
 				A6AEDEC71EE7F17C00DBE3FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
