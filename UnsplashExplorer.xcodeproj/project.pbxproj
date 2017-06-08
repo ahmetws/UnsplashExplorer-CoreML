@@ -120,8 +120,7 @@
 				A6DD01DD1EE88E3B00D51951 /* Models */,
 				A6DD01DF1EE88E3B00D51951 /* Services */,
 			);
-			name = Common;
-			path = "../../../../Downloads/CoreMLDemo-master/CoreMLDemo/Common";
+			path = Common;
 			sourceTree = "<group>";
 		};
 		A6DD01D91EE88E3B00D51951 /* Extensions */ = {

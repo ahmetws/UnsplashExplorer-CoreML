@@ -12,7 +12,7 @@ extension UIImage {
     func convert(image: UIImage) -> CVPixelBuffer? {
         //Reference: https://github.com/cieslak/CoreMLCrap/blob/master/MachineLearning/ViewController.swift#L42
         var pixelBuffer : CVPixelBuffer?
-        let imageDimension : CGFloat = 224.0
+        let imageDimension : CGFloat = 299.0
         let rgbColorSpace = CGColorSpaceCreateDeviceRGB()
         let imageSize = CGSize(width:imageDimension, height:imageDimension)
         let imageRect = CGRect(origin: CGPoint(x:0, y:0), size: imageSize)

@@ -12,7 +12,7 @@ import CoreML
 class PredictionService: NSObject {
     
     //MARK: Properties
-    fileprivate let model = Resnet50()
+    fileprivate let model = Inceptionv3()
     
     //MARK: Public
     func predict(input: CVPixelBuffer) -> [PredictionResult]? {
@@ -22,7 +22,7 @@ class PredictionService: NSObject {
         return nil
     }
     
-    func predict(image:UIImage) -> [PredictionResult]? {
+    func predict(image: UIImage) -> [PredictionResult]? {
         guard let buffer = image.convert(image: image) else { return nil }
         if let prediction = try? model.prediction(image: buffer) {
             return self.getPredictionResults(from: prediction)
@@ -31,7 +31,7 @@ class PredictionService: NSObject {
     }
     
     //MARK: Private
-    fileprivate func getPredictionResults(from output:Resnet50Output) -> [PredictionResult] {
+    fileprivate func getPredictionResults(from output: Inceptionv3Output) -> [PredictionResult] {
         let sortedProbs = output.classLabelProbs.sorted(by: {$0.1 > $1.1})
         
         var result : [PredictionResult] = []
