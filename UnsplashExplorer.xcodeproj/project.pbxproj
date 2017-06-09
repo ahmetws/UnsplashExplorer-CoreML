@@ -40,7 +40,7 @@
 		A6AEDEB91EE7F17C00DBE3FF /* UnsplashExplorerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnsplashExplorerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6AEDEBD1EE7F17C00DBE3FF /* UnsplashExplorerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashExplorerTests.swift; sourceTree = "<group>"; };
 		A6AEDEBF1EE7F17C00DBE3FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A6AEDEC91EE80A5100DBE3FF /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Inceptionv3.mlmodel; path = ../../../../../Downloads/Inceptionv3.mlmodel; sourceTree = "<group>"; };
+		A6AEDEC91EE80A5100DBE3FF /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
 		A6DD01DC1EE88E3B00D51951 /* UIImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		A6DD01DE1EE88E3B00D51951 /* PredictionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictionResult.swift; sourceTree = "<group>"; };
 		A6DD01E01EE88E3B00D51951 /* PredictionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictionService.swift; sourceTree = "<group>"; };
